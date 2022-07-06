@@ -1,220 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fitness_Hub</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        /* this is a css reset styling , we should always use this at the start of css*/
-        margin: 0px;
-        padding: 0px;
-        background: url(gym1.jpg);
-        font-family: "Baloo Da 2", cursive;
-      }
-      .left {
-        color: ivory;
-        display: inline-block; /*div's are generally an inline elements so we are converting it to a block or inline-block elements*/
-        width: 7%;
-        margin: 10px auto;
-        position: absolute; /* position absolute with respect to header*/
-        top: 2px;
-        left: 2px;
-      }
-      .left img {
-        width: 107px; /*targeting the img tag with respect to left class div*/
-        position: relative; /*position relative to its original position where it was created*/
-        left: 6px;
-        top: 2px;
-      }
-      .left span {
-        padding: 10px;
-      }
-      .mid {
-        color: ivory;
-        display: block;
-        width: 31%;
-        margin: auto;
-      }
-      .navbar {
-        /*targeting the navbar first and converting it to inline-block from inline*/
-        display: inline-block;
-      }
-      .navbar li {
-        /*targeting the li part of the navbar and converting it also to inline-block from inline*/
-        display: inline-block;
-        font-size: 20px;
-      }
-      .navbar li a {
-        color: #e8df9e;
-        text-decoration: none;
-        padding: 20px 20px;
-        cursor: pointer;
-      }
-      .navbar li a:hover {
-        color: beige;
-        text-decoration: underline;
-      }
-      .right {
-        color: ivory;
-        display: inline-block;
-        width: 10%;
-        margin: 10px auto;
-        position: absolute; /* position absolute with respect to header*/
-        top: 2px;
-        right: 2px;
-      }
 
-      .container1 {
-        text-align: center;
-        display: inline-flex;
-        color: white;
-        position: absolute;
-        top: 185px;
-        left: 770px;
-      }
-      .container1 .static-txt {
-        color: white;
-        font-size: 40px;
-        font-weight: 400;
-        margin: 28px -35px; /*we here used margin property fopr positioning the static text part and making a good alignment with the dynamic text*/
-      }
-      .container1 .dynamic-txt {
-        margin-left: 15px;
-        height: 90px;
-        line-height: 90px;
-        overflow: hidden;
-      }
-      .dynamic-txt li {
-        list-style: none;
-        color: #fc6d6d;
-        font-size: 30px;
-        font-weight: 500;
-        position: relative;
-        top: 0px;
-        animation: slide 6s steps(4) infinite;
-      }
-      @keyframes slide {
-        100% {
-          top: -360px;
-        }
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness_Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"   rel="stylesheet">
 
-      .dynamic-txt li span {
-        position: relative;
-      }
-      .dynamic-txt li span::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0px;
-        height: 100%;
-        width: 100%;
-        background: black;
-        border-left: 2px solid #fc6d6d;
-        animation: typing 1.5s steps(10) infinite;
-      }
-      @keyframes typing {
-        100% {
-          left: 100%;
-          margin: 0 -35px 0 35px;
-        }
-      }
-      .container2 {
-        color: antiquewhite;
-        border: 2px solid white;
-        margin: 85px 10px; /*we can give an element position with help of margin*/
-        padding: 65px 20px;
-        width: 25%;
-        border-radius: 15px;
-      }
-      .container2 h1 {
-        font-size: 25px;
-        margin: 5px 18px;
-      }
-      .form-grp input {
-        display: block;
-        text-align: center;
-        width: 300px;
-        padding: 4px;
-        font-size: 12px;
-        margin: 7px 82px;
-        font-family: "Baloo Da 2", cursive;
-        font-weight: bold;
-      }
-      #button {
-        position: relative;
-        top: 5px;
-        left: 167px;
-        color: coral;
-        width: 33%;
-        background-color: rgb(65, 62, 62);
-        border-radius: 4px;
-        cursor: pointer;
-        font-family: "Baloo Da 2", cursive;
-        font-weight: bold;
-      }
-      #button:hover {
-        color: rgb(54, 231, 157);
-        background-color: rgba(65, 62, 62, 0.3);
-      }
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <div class="left">
-        <img src="logo.png" />
-        <span>_Fitness HuB_</span>
-      </div>
-      <div class="mid">
-        <nav class="navbar">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Registration</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="right"></div>
-    </header>
-    <div class="container1">
-      <div class="static-txt">We have a solution for:</div>
-      <ul class="dynamic-txt">
-        <li><span> Weight-loss</span></li>
-        <li><span>Cardio</span></li>
-        <li><span>Weight-lifting</span></li>
-        <li><span>Body shaping</span></li>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="header">
+    <div class="left">
+      <img src="logo.png" />
+      <span>_Fitness HuB_</span>
+    </div>
+    <div class="mid">
+      <span class="material-icons-outlined" id="hamburger-icon" onclick=hamIcon()>menu</span>
+      <ul id="mid">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Registration</a></li>
+        <li><a href="#">Contact us</a></li>
       </ul>
     </div>
+    <div class="right"></div>
+  </nav>
+
+  <div class="wrapper">
+
+    <div class="container1">
+      <div class="container_1_sub_container_1">
+        <div class="static-txt">We have a solution for:</div>
+        <ul class="dynamic-txt">
+          <li><span> Weight-loss</span></li>
+          <li><span>Cardio</span></li>
+          <li><span>Weight-lifting</span></li>
+          <li><span>Body shaping</span></li>
+        </ul>
+      </div>
+
+      <div class="container_1_sub_container_2">
+        <img src="gym1.jpg" alt="GYM Image">
+      </div>
+    </div>
+
     <div class="container2">
       <h1>Join the best gym in Kolkata now.</h1>
-      <form action="noaciton.php">
-        <!--noaction.php is for backend to store all the info from form-->
-        <div class="form-grp">
-          <input type="text" name="" placeholder="Enter your name" />
-        </div>
-        <div class="form-grp">
-          <input type="text" name="" placeholder="Enter your home-address" />
-        </div>
-        <div class="form-grp">
-          <input type="text" name="" placeholder="Enter your E-mail" />
-        </div>
-        <div class="form-grp">
-          <input type="text" name="" placeholder="Enter your age" />
-        </div>
-        <div class="form-grp">
-          <input type="text" name="" placeholder="Enter your phone number" />
-        </div>
+      <form action="noaciton.php" class="form">
+        <input type="text" name="" placeholder="Enter your name" />
+        <input type="text" name="" placeholder="Enter your home-address" />
+        <input type="text" name="" placeholder="Enter your E-mail" />
+        <input type="text" name="" placeholder="Enter your age" />
+        <input type="text" name="" placeholder="Enter your phone number" />
       </form>
       <button id="button">Submit</button>
     </div>
-  </body>
+
+  </div>
+  <script src="navbar.js"></script>
+</body>
+
 </html>
